@@ -3,10 +3,6 @@ const allMusic = [
    artist : '24kGoldn',
    audio : '24kGoldn - Mood'
   },
-  {name : 'Alan Walker',
-   artist : 'Alan Walker',
-   audio : 'Alan Walker'
-  },
   {name : 'NEFFEX - Cold',
    artist : 'NEFFEX',
    audio : 'NEFFEX - Cold'
