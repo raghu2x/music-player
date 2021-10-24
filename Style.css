@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+  --pink: #ff74a4;
+  --violet: #9f6ea3;
+  --lightblack: #515C6F;
+  --white: #ffffff;
+  --darkwhite: #cecaca;
+  --pinkshadow: #ffcbdd;
+  --lightbshadow: rgba(0, 0, 0, 0.15);
+}
+
+/* body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+} */
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  user-select: none;
+  background: linear-gradient(var(--pink) 0%,var(--violet) 100%);
+  
+}
+.container{
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px var(--lightbshadow);
+  overflow: hidden;
+  
+}
+
+.top-bar, .progress-area, .timer , .controls, .header, .music-list ul li{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .image{
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 16px var(--lightbshadow);
+  overflow: hidden;
+  
+}
+
+.image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.song-info{
+  text-align: center;
+  margin: 5px 0;
+}
+
+.song-info .artist{
+  color: var(--lightblack);
+  font-size: 14px;
+  opacity: 0.9;
+}
+ .progress-area{
+  margin-top: 10px;
+  width: 100%;
+  height: 5px;
+  background: #f0f0f0;
+  border-radius: 50px;
+}
+
+.progress-bar{
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg,var(--pink) 0%,var(--violet) 100%);
+  border-radius: inherit;
+  position: relative;
+}
+
+.progress-bar::before{
+  content: "";
+  opacity: 1;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: inherit;
+  z-index: 2;
+}
+.progress-area:hover .progress-bar::before{
+  opacity: 1;
+}
+
+.timer{
+  color: var(--lightblack);
+}
+
+.controls{
+  margin-top: 15px;
+}
+.controls i{
+  font-size: 28px;
+  background: linear-gradient(var(--pink) 0%,var(--violet) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.controls #prev ,.controls #next{font-size: 40px;}
+
+.controls #prev{ margin-left: -13px;}
+.controls #next{ margin-right: -13px;}
+
+.controls .play-pause{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 5px var(--pinkshadow);
+  background: linear-gradient(var(--white) 0%,var(--darkwhite) 100%);
+}
+
+.play-pause::before{
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(var(--pink) 0%,var(--violet) 100%);
+  border-radius: inherit;
+}
+.play-pause i{
+  height: 42px;
+  height: 42px;
+  line-height: 42px;
+  background-clip: text;
+  text-align: center;
+  background: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}
+
+.music-list{
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  padding: 10px 15px;
+  border-radius: inherit;
+  background: var(--white);
+  box-shadow: 0 -5px 10px var(--lightbshadow);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  z-index: 100;
+}
+
+.music-list.show{
+  opacity: 1;
+  bottom: 0;
+}
+.header .row{
+  opacity: 0.6;
+  display: flex;
+}
+.header .row span{
+  margin-left: 5px;
+}
+
+ul{
+  max-height: 250px;
+  overflow: scroll;
+  margin: 5px 0;
+}
+ ul li p{
+   font-size: 14px;
+   opacity: 0.9;
+   /* color: var(--lightblack); */
+   margin-bottom: 5px;
+ }
+
+ul li{
+  color: var(--lightblack);
+  list-style: none;
+  border-bottom: 1px solid var(--lightbshadow);
+}
+
+ li.playing{
+  color: var(--pink);
+  pointer-events: none;
+}
+li:last-child{
+  border: none;
+}
+.audio-duration{
+  font-size: 16px;
+}
+
+.rotation{
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate{
+  from{transform: rotate(0deg)}
+  to{transform: rotate(360deg)}
+}

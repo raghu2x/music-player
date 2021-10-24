@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <link rel="icon" href="Images/music-1.jpg" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="Music-list.js" defer></script>
+    <script src="Main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <i class="material-icons-round">expand_more</i>
+        <span>Now Playing</span>
+        <i class="material-icons-round">more_horiz</i>
+      </div>
+      <div class="image">
+        <img src="" alt=""/>
+      </div>
+      <div class="song-info">
+        <p class="name"> </p>
+        <p class="artist"> </p>
+      </div>
+      <audio id="main-audio" src=""></audio>
+      <div class="progress-area">
+        <div class="progress-bar"></div>
+      </div>
+      <div class="timer">
+        <span class="current">00:00</span>
+        <span class="duration">00:00</span>
+      </div>
+      <div class="controls">
+        <i id="repeat" class="material-icons-round">repeat</i>
+        <i id="prev" class="material-icons-round">skip_previous</i>
+        <div class="play-pause">
+          <i class="material-icons-round">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons-round">skip_next</i>
+        <i id="more-music" class="material-icons-round">queue_music</i>
+      </div>
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class="material-icons-round">queue_music</i>
+            <span>Music list</span>
+          </div>
+            <i id="close" class="material-icons-round">clear</i>
+        </div>
+        <ul>
+          <!-- li coming from js -->
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
