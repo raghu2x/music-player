@@ -43,7 +43,7 @@ const allMusic = [
                   <p>${music.artist}</p>
                 </div>
                 <div class="audio-duration">0.00</div>
-                <audio src='${music.audio}.mp3' />
+                <audio src='music/${music.audio}.mp3' />
               </li>`
   document.querySelector('ul').insertAdjacentHTML('beforeend',li)
   
