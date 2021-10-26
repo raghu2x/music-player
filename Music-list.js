@@ -3,6 +3,10 @@ const allMusic = [
    artist : '24kGoldn',
    audio : '24kGoldn - Mood'
   },
+  {name : 'Alan Walker',
+   artist : 'Alan Walker',
+   audio : 'Alan Walker'
+  },
   {name : 'NEFFEX - Cold',
    artist : 'NEFFEX',
    audio : 'NEFFEX - Cold'
@@ -14,6 +18,22 @@ const allMusic = [
   {name : 'NEFFEX - Grateful',
    artist : 'NEFFEX',
    audio : 'NEFFEX - Grateful'
+  },
+  {name : 'NEFFEX - Graveyard',
+   artist : 'NEFFEX',
+   audio : 'NEFFEX - Graveyard'
+  },
+  {name : 'NEFFEX - Never Give Up',
+   artist : 'NEFFEX',
+   audio : 'NEFFEX - Never Give Up'
+  },
+  {name : 'NEFFEX - Soldier',
+   artist : 'NEFFEX',
+   audio : 'NEFFEX - Soldier'
+  },
+  {name : 'NEFFEX - Rumors',
+   artist : 'NEFFEX',
+   audio : 'NEFFEX - Rumors'
   }
   ]
   allMusic.map((music,i)=>{
