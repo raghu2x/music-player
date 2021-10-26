@@ -22,7 +22,7 @@ let music_list = document.querySelector('.music-list'),
     const loadMusic = (Index) => {
     musicName.innerHTML = allMusic[Index-1].name
     musicArtist.innerHTML = allMusic[Index-1].artist
-    mainAudio.src = allMusic[Index-1].audio+'.mp3'
+    mainAudio.src = 'music/'+allMusic[Index-1].audio+'.mp3'
     // musicImage.src = 'Images/'+allMusic[Index-1].image+'.jpg'
     musicImage.src = `https://picsum.photos/id/${Index+50}/200.jpg`
   }
